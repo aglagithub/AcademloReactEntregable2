@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { kelvinTocelsius, kelvinToFahrenheit } from '../utils/temp'
 import { getIconImage } from '../utils/WeatherIcons'
 
-const Weather = ({ weatherInfo }) => {
+const Weather = ({ weatherInfo,backGroundImage }) => {
     console.log("Data Read in Weather component: ", weatherInfo)
+    console.log("Background Image: ", backGroundImage)
     const [isCelsius, setIsCelsius] = useState(true)
     const [buttonLabel, setButtonLabel] = useState('Cambio a Fº')
 

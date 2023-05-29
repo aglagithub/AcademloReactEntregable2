@@ -1,4 +1,4 @@
-export const getBackgroundImage=()=>{
+export const getBackgroundImage=(imageCode)=>{
 const backgroundImage ={
        "01d":"/public/images/backgroundImages/ClearSky.jpg",
        "02d":"/public/images/backgroundImages/FewClouds.jpg",
@@ -19,8 +19,8 @@ const backgroundImage ={
        "11n":"/public/images/backgroundImages/thunderstormy.jpg",
        "13n":"/public/images/backgroundImages/Smowy.jpg",
        "50n":"/public/images/backgroundImages/Misty.jpg",
-       
 
 }
+return backgroundImage[imageCode]
 
 }

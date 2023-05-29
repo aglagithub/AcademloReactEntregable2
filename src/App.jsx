@@ -3,13 +3,14 @@ import axios from 'axios'
 import './App.css'
 import Weather from "./components/Weather"
 import { sampleData } from './utils/sampleData'
+import { getBackgroundImage } from './utils/backgroundImage'
 
 function App() {
   //console.log("Sample Data: ",sampleData)
   const [weatherInfo, setWeatheInfo] = useState(null)
-  const [backGroundImage, setBackGroundImage] = useState('/images/backgroundImages/Rainy.jpg')
+  const [backGroundImage, setBackGroundImage] = useState(null)
 
-  
+ 
   const success = (pos) => {
     //console.log(pos)
     const lat = pos.coords.latitude
@@ -26,6 +27,8 @@ function App() {
       .then(({ data }) => {
         console.log("Data read:",data)
         setWeatheInfo(data)
+        console.log("ImageCode",data.weather[0].icon)
+        setBackGroundImage(getBackgroundImage(data.weather[0].icon))
       })
       .then((err => console.log(err)))  
   }
@@ -39,7 +42,8 @@ function App() {
   return (
     <>
       <main  style={{backgroundImage: `url(${backGroundImage})`}} className=" text-3xl text-white min-h-screen flex justify-center items-center px-2 font-principal-font  bg-cover bg-center">
-        <Weather weatherInfo={weatherInfo} />
+
+        <Weather weatherInfo={weatherInfo} backGroundImage={backGroundImage}/>
         {/* <Weather weatherInfo={weatherInfo?weatherInfo:sampleData} /> */}
        
 
