@@ -42,8 +42,8 @@ function App() {
   return (
     <>
       <main  style={{backgroundImage: `url(${backGroundImage})`}} className=" text-3xl text-white min-h-screen flex justify-center items-center px-2 font-principal-font  bg-cover bg-center">
-
-        <Weather weatherInfo={weatherInfo} backGroundImage={backGroundImage}/>
+      {weatherInfo ?
+        <Weather weatherInfo={weatherInfo} backGroundImage={backGroundImage}/>: <div>......</div>}
         {/* <Weather weatherInfo={weatherInfo?weatherInfo:sampleData} /> */}
        
 
