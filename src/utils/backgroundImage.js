@@ -9,7 +9,7 @@ const backgroundImage ={
        "11d":"/public/images/backgroundImages/thunderstormy.jpg",
        "13d":"/public/images/backgroundImages/Smowy.jpg",
        "50d":"/public/images/backgroundImages/Misty.jpg",
-       
+
        "01n":"/public/images/backgroundImages/ClearSky.jpg",
        "02n":"/public/images/backgroundImages/FewClouds.jpg",
        "03n":"/public/images/backgroundImages/ScatterdedClouds.jpg",
