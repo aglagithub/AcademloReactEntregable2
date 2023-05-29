@@ -3,7 +3,7 @@ import { kelvinTocelsius, kelvinToFahrenheit } from '../utils/temp'
 import { getIconImage } from '../utils/WeatherIcons'
 
 const Weather = ({ weatherInfo }) => {
-    //console.log("Data Read in Weather component: ", weatherInfo)
+    console.log("Data Read in Weather component: ", weatherInfo)
     const [isCelsius, setIsCelsius] = useState(true)
     const [buttonLabel, setButtonLabel] = useState('Cambio a Fº')
 
