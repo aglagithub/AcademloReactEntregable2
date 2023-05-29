@@ -24,7 +24,7 @@ function App() {
     /*LLamada a servicio */
      axios.get(URL)
       .then(({ data }) => {
-        //console.log("Data read:",data)
+        console.log("Data read:",data)
         setWeatheInfo(data)
       })
       .then((err => console.log(err)))  
@@ -39,8 +39,8 @@ function App() {
   return (
     <>
       <main  style={{backgroundImage: `url(${backGroundImage})`}} className=" text-3xl text-white min-h-screen flex justify-center items-center px-2 font-principal-font  bg-cover bg-center">
-        {/*<Weather weatherInfo={weatherInfo} />*/}
-        <Weather weatherInfo={weatherInfo?weatherInfo:sampleData} />
+        <Weather weatherInfo={weatherInfo} />
+        {/* <Weather weatherInfo={weatherInfo?weatherInfo:sampleData} /> */}
        
 
       </main>
