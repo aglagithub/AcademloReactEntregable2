@@ -17,31 +17,31 @@ const Weather = ({ weatherInfo,backGroundImage }) => {
     return (
         <main >
         <section className='text-center grid gap-6'>
-            <h2 className='text-bold text-2xl text-black'>{weatherInfo?.name}, {weatherInfo?.sys.country}</h2>
+            <h2 className='text-bold text-2xl text-black sm:text-5xl'>{weatherInfo?.name}, {weatherInfo?.sys.country}</h2>
             <section className='grid gap-4 sm:grid-cols-[1fr_auto] ' >
                 {/* Temperatura */}
                 <article className="bg-white/70 p-2 rounded-3xl grid grid-cols-2 items-center" >
-                    <h3 className='col-span-2 text-black capitalize'>{weatherInfo?.weather[0].description}</h3>
-                    <span className='text-5xl text-black' >{isCelsius ? kelvinTocelsius(weatherInfo?.main.temp) : kelvinToFahrenheit(weatherInfo?.main.temp)}</span>
+                    <h3 className='col-span-2 text-black capitalize sm:text-5xl'>{weatherInfo?.weather[0].description}</h3>
+                    <span className='text-5xl text-black sm:text-8xl' >{isCelsius ? kelvinTocelsius(weatherInfo?.main.temp) : kelvinToFahrenheit(weatherInfo?.main.temp)}</span>
 
                     <div><img src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}@4x.png`} alt={weatherInfo?.weather[0].description} /></div>
 
                 </article>
 
-                {/* Datos Adicionales */}
+                {/* Datos Adicionales */} 
                 <section className="bg-white/70 p-2 py-6 rounded-3xl grid grid-cols-3 justify-items-center text-lg sm:grid-cols-1 sm:items-center">
 
-                    <article className="flex gap-2 sm:items-center">
+                    <article className="flex gap-2 sm:items-center ">
                         <div><img src="/images/Wind.png" alt="" />
                         </div>
-                        <span className="text-black ">{weatherInfo?.wind.speed} m/s </span>
+                        <span className="text-black sm:text-2xl">{weatherInfo?.wind.speed} m/s </span>
                     </article >
-                    <article className="flex gap-2 sm:items-center">
+                    <article className="flex gap-2 sm:items-center sm:text-2xl">
                         <div><img src="/images/Humidity.png" alt="" />
                         </div>
                         <span className="text-black">  {weatherInfo?.main.humidity} %</span>
                     </article  >
-                    <article className="flex gap-2 sm:items-center">
+                    <article className="flex gap-2 sm:items-center sm:text-2xl">
                         <div><img src="/images/Pressure.png" alt="" />
                         </div>
                         <span className="text-black sm:items-center"> {weatherInfo?.main.pressure} hPa</span>
@@ -50,7 +50,7 @@ const Weather = ({ weatherInfo,backGroundImage }) => {
 
                 </section>
             </section>
-            <button className="btn bg-white text-black rounded-full text-xl" onClick={handleChangeTemp} >{buttonLabel}</button>
+            <button className="btn bg-white text-black rounded-full text-xl sm:text-3xl" onClick={handleChangeTemp} >{buttonLabel}</button>
             {/* <div className="iconsList flex flex-wrap gap-3 justify-center">
                 <img src={getIconImage("01d")} alt="" />
                 <img src={getIconImage("02d")} alt="" />
