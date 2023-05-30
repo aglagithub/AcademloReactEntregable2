@@ -4,7 +4,7 @@ import './App.css'
 import Weather from "./components/Weather"
 import { sampleData } from './utils/sampleData'
 import { getBackgroundImage } from './utils/backgroundImage'
-import { SplashScreen } from './components/SplashScreen'
+import  SplashScreen  from './components/SplashScreen'
 
 function App() {
   //console.log("Sample Data: ",sampleData)
